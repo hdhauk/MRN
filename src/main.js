@@ -6,22 +6,41 @@ import Drawer from 'react-native-drawer';
 
 
 export default class Main extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      openDrawerOffset: 0.4
+    };
+  }
+
   closeDrawer = () => {
-    this._drawer.close()
+    if(this.state.openDrawerOffset == 0){
+      this.toggleFullScreenDrawer();
+    }
+    this._drawer.close();
   }
   openDrawer = () => {
-    this._drawer.open()
+    this._drawer.open();
+  }
+
+  toggleFullScreenDrawer = () => {
+    if(this.state.openDrawerOffset == 0.4){
+      this.setState({openDrawerOffset:0});
+    }else{
+      this.setState({openDrawerOffset:0.4});
+    }
   }
 
   render() {
     return(
       <Drawer
-      type="displace"
+      type="overlay"
       ref={(ref) => this._drawer = ref}
       tapToClose={true}
       side='right'
-      openDrawerOffset={0.4}
-      content={<DrawerContent />}
+      openDrawerOffset={this.state.openDrawerOffset}
+      content={<DrawerContent toggleFullScreenDrawer={this.toggleFullScreenDrawer}/>}
       >
         <Front openDrawer={this.openDrawer}/>
       </Drawer>
