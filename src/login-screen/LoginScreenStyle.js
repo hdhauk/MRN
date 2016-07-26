@@ -13,14 +13,16 @@ export default StyleSheet.create({
   },
   row: {
     paddingVertical: 5,
-    paddingHorizontal: 5
+    paddingHorizontal: 5,
+    alignItems:'center'
   },
   rowLabel: {
     color: '#757575'
   },
   textInput: {
     height: 40,
-    color: '#212121'
+    color: '#212121',
+    textAlign:'center'
   },
   textInputReadonly: {
     height: 40,
