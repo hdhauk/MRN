@@ -8,7 +8,8 @@ export default StyleSheet.create({
   form: {
     backgroundColor: '#FAFAFA',
     margin: 10,
-    borderRadius: 4
+    borderRadius: 4,
+    opacity:0.7
   },
   row: {
     paddingVertical: 5,
@@ -23,7 +24,8 @@ export default StyleSheet.create({
   },
   textInputReadonly: {
     height: 40,
-    color: '#9E9E9E'
+    color: '#9E9E9E',
+    opacity:1
   },
   loginRow: {
     paddingBottom: 5,
@@ -38,7 +40,8 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: '#2196F3',
     backgroundColor: '#2196F3',
-    padding: 6
+    padding: 6,
+    opacity:1
   },
   loginText: {
     textAlign: 'center',
