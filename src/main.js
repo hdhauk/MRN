@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import Front from './front';
+//import Front from './front';
+import Login from './login-screen/login-screen';
 import DrawerContent from './drawer-content';
 import Drawer from 'react-native-drawer';
 
@@ -42,7 +43,7 @@ export default class Main extends Component {
       openDrawerOffset={this.state.openDrawerOffset}
       content={<DrawerContent toggleFullScreenDrawer={this.toggleFullScreenDrawer}/>}
       >
-        <Front openDrawer={this.openDrawer}/>
+        <Login openDrawer={this.openDrawer}/>
       </Drawer>
     );
   }
